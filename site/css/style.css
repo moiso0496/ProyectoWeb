@@ -1,40 +1,40 @@
 /* Getting the new tags to behave */
-article, aside, audio, 
-canvas, command, 
-datalist, details, 
-embed, 
-figcaption, figure, footer, 
-header, hgroup, 
-keygen, 
-meter, 
-nav, 
-output, 
-progress, 
-section, source, 
+article, aside, audio,
+canvas, command,
+datalist, details,
+embed,
+figcaption, figure, footer,
+header, hgroup,
+keygen,
+meter,
+nav,
+output,
+progress,
+section, source,
 video {
 	display:block;
 }
-mark, 
-rp, rt, ruby, 
-summary, 
+mark,
+rp, rt, ruby,
+summary,
 time {
 	display:inline;
 }
 
 /* Global properties ======================================================== */
-body { 
-	background:url(../images/tail-top.gif) left top repeat-x #ffa600; 
+body {
+	background:url(../images/tail-top.gif) left top repeat-x #ffa600;
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:100%; 
+	font-size:100%;
 	line-height:1em;
 	color:#481a00;
 }
 html,
-.body-bg { 
+.body-bg {
 	min-width:980px;
 }
-html, 
-body { 
+html,
+body {
 	height:100%;
 }
 
@@ -54,13 +54,19 @@ body {
 		height:auto!important;
 		height:324px;
 	}
-	
+
 	/* Content */
 	section#content {
 		position:relative;
 		z-index:20;
 	}
-			
+
+	#page3 h2{
+		color: black;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
 	/* Footer */
 	footer {
 		height:328px;
@@ -81,30 +87,30 @@ body {
 
 /* Left & Right alignment */
 
-.fleft { 
+.fleft {
 	float:left;
 }
-.fright { 
+.fright {
 	float:right;
 }
-.clear { 
+.clear {
 	clear:both;
 }
 
-.col-1, 
-.col-2, 
-.col-3 { 
+.col-1,
+.col-2,
+.col-3 {
 	float:left;
 }
 
-.alignright { 
+.alignright {
 	text-align:right;
 }
-.aligncenter { 
+.aligncenter {
 	text-align:center;
-}	
+}
 
-.wrapper { 
+.wrapper {
 	width:100%;
 	overflow:hidden;
 }
@@ -118,19 +124,25 @@ body {
 
 
 /*---- tailings ----*/
-.body-bg { 
+.body-bg {
 	background-image:url(../images/main-bg.jpg);
 	background-repeat:no-repeat;
 	background-position:center top;
+}
+#page3 .body-bg {
+	background-image:url(../images/Poker.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
 }
 #page1 .body-bg {
 	background-image:url(../images/1page-main-bg.png);
 }
 
 /*----- form defaults -----*/
-input, 
-select, 
-textarea { 
+input,
+select,
+textarea {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:1em;
 	vertical-align:middle;
@@ -170,13 +182,13 @@ ul#sitemap {
 
 
 /*----- other -----*/
-.img-indent { 
-	margin:0 20px 0 0; 
+.img-indent {
+	margin:0 20px 0 0;
 	float:left;
 }
-.img-box { 
-	width:100%; 
-	overflow:hidden; 
+.img-box {
+	width:100%;
+	overflow:hidden;
 	position:relative;
 	top:-5px;
 	padding-top:8px;
@@ -184,8 +196,8 @@ ul#sitemap {
 .img-box.alt {
 	padding-bottom:16px;
 }
-	.img-box img { 
-		float:left; 
+	.img-box img {
+		float:left;
 		margin:-3px 9px 0 0;
 	}
 	.img-box img.fright {
@@ -194,7 +206,7 @@ ul#sitemap {
 		margin-left:9px;
 	}
 
-.extra-wrap { 
+.extra-wrap {
 	overflow:hidden;
 }
 
@@ -208,7 +220,7 @@ p {
 .p1 {
 	margin-bottom:40px;
 }
-	
+
 address {
 	font-style:normal;
 }
@@ -235,7 +247,7 @@ address {
 
 /*----- txt, links, lines, titles -----*/
 a {
-	color:#ef4f00; 
+	color:#ef4f00;
 	outline:none;
 }
 a:hover {
@@ -257,12 +269,12 @@ h2 {
 	font-size:30px;
 	line-height:1.2em;
 	padding-left:9px;
-	margin-bottom:15px;	
+	margin-bottom:15px;
 }
 h5 {
 	font-size:1em;
 	line-height:1.2em;
-	margin-bottom:13px;	
+	margin-bottom:13px;
 }
 	h5,
 	h5 a {
@@ -271,52 +283,52 @@ h5 {
 
 
 /*==================boxes====================*/
-.box { 
+.box {
 	width:100%;
 }
-	.box .left-top-corner { 
-		background:url(../images/left-top-corner.png) no-repeat left top; 
-		height:17px; 
+	.box .left-top-corner {
+		background:url(../images/left-top-corner.png) no-repeat left top;
+		height:17px;
 		padding-left:151px;
 	}
-	.box .right-top-corner { 
-		background:url(../images/right-top-corner.png) no-repeat right top; 
-		height:17px; 
+	.box .right-top-corner {
+		background:url(../images/right-top-corner.png) no-repeat right top;
+		height:17px;
 		padding-right:151px;
 	}
-	.box .border-top { 
-		background:url(../images/border-top.gif) center top repeat-x; 
-		height:17px; 
-		font-size:0; 
-		line-height:0; 
+	.box .border-top {
+		background:url(../images/border-top.gif) center top repeat-x;
+		height:17px;
+		font-size:0;
+		line-height:0;
 		width:100%;
 	}
-	.box .left-bot-corner { 
-		background:url(../images/left-bot-corner.png) no-repeat left bottom; 
-		height:17px; 
+	.box .left-bot-corner {
+		background:url(../images/left-bot-corner.png) no-repeat left bottom;
+		height:17px;
 		padding-left:151px;
 	}
-	.box .right-bot-corner { 
-		background:url(../images/right-bot-corner.png) no-repeat right bottom; 
-		height:17px; 
+	.box .right-bot-corner {
+		background:url(../images/right-bot-corner.png) no-repeat right bottom;
+		height:17px;
 		padding-right:151px;
 	}
-	.box .border-bot { 
-		background:url(../images/border-bot.gif) left bottom repeat-x; 
-		height:17px; 
-		font-size:0; 
-		line-height:0; 
+	.box .border-bot {
+		background:url(../images/border-bot.gif) left bottom repeat-x;
+		height:17px;
+		font-size:0;
+		line-height:0;
 		width:100%;
 		position:relative;
 	}
-	.box .border-left { 
-		background:url(../images/border-left.jpg) left top repeat-y; 
+	.box .border-left {
+		background:url(../images/border-left.jpg) left top repeat-y;
 	}
-	.box .border-right { 
-		background:url(../images/border-right.jpg) right top repeat-y; 
+	.box .border-right {
+		background:url(../images/border-right.jpg) right top repeat-y;
 		width:100%;
 	}
-	.box .xcontent { 
+	.box .xcontent {
 		background:url(../images/box-tail.jpg) center top;
 	}
 	.box .inner {
@@ -389,9 +401,6 @@ header nav {
 				header nav ul li.current a span {
 					background:url(../images/nav-act-right.png) no-repeat right 2px;
 				}
-header .indent {
-	padding:185px 400px 35px 58px;
-}
 header p a {
 	color:#ce4400;
 }
@@ -400,8 +409,8 @@ header p a {
 #content .inside {
 	padding:0 60px 120px 58px;
 }
-#content .indent {
-	padding-right:346px;
+.inner1{
+	text-align: justify;
 }
 
 /*===== footer =====*/
@@ -431,4 +440,3 @@ footer a {
 #contacts-form a.alt { color:#481a00;}
 
 /*==========================================*/
-    

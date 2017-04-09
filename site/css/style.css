@@ -22,6 +22,22 @@ time {
 	display:inline;
 }
 
+
+.ContactosTabla {
+
+	background-color: #ffeb8e;
+	color: black;
+	text-align: center;
+	font-size: 15px;
+	font-family: verdana;
+	width: 100%;
+	opacity: 0.6;
+}
+.ContactosTabla th, .ContactosTabla td {
+	border: 2px solid #6e5908;
+}
+
+
 /* Global properties ======================================================== */
 body {
 	background:url(../images/tail-top.gif) left top repeat-x #ffa600;

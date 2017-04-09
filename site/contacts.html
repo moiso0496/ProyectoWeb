@@ -20,6 +20,53 @@
 <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5.js"></script>
     <![endif]-->
+   <script src="js/jquery.js"></script>
+   <script src="js/jquery-ui.js"></script>
+
+   <script>
+       $( function() {
+           $( "#draggable" ).draggable();
+       } );
+   </script>
+
+   <script>
+       $( function() {
+           // run the currently selected effect
+           function runEffect() {
+               // get effect type from
+               var selectedEffect = "slide";
+
+               // Most effect types need no options passed by default
+               var options = {};
+               // some effects have required parameters
+               if ( selectedEffect === "explode" ) {
+                   options = { percent: 50 };
+               } else if ( selectedEffect === "size" ) {
+                   options = { to: { width: 280, height: 185 } };
+               }
+
+               // Run the effect
+               $( "div.effect" ).show( selectedEffect, options, 500, callback );
+           };
+
+           //callback function to bring a hidden box back
+           function callback() {
+               setTimeout(function() {
+                   $( "div.effect:visible" ).removeAttr( "style" ).fadeOut();
+               }, 5000 );
+           };
+
+           // Set effect from select menu value
+           $( "th.photo" ).on( "click", function() {
+               runEffect();
+           });
+
+           $( "#effect" ).hide();
+       } );
+   </script>
+
+
+
 </head>
 <body id="contacts">
 <div class="body-bg wrap">
@@ -43,8 +90,8 @@
    <!-- content -->
    <section id="content">
       <div class="container">
-         <div class="inside">
-            <h2>Contact Form</h2>
+         <div id="draggable" class="inside">
+            <h2>Contactos</h2>
             <div class="box">
                <div class="left-top-corner">
                   <div class="right-top-corner">
@@ -65,28 +112,54 @@
                                  </tr>
 
                                  <tr>
-                                    <th>Alonso Aleston</th>
-                                    <th>aaleston@gmail.com</th>
-                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                    <th class ="photo">
+                                       <br>
+                                       Alonso Aleston
+
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <br>
+                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Gerardo.jpg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+                                       <br>
+                                    </th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback"><br>aaleston@gmail.com </a> </th>
+                                    <th><br><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
                                  <tr>
                                  <tr>
-                                    <th>Gerardo Gomez</th>
-                                    <th>gcgoqn@gmail.com</th>
+                                    <th class="photo">
+                                       Gerardo Gomez
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Gerardo.jpg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+                                    </th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">gcgoqn@gmail.com</a> </th>
                                     <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
                                  <tr>
                                  <tr>
                                     <th>Jose Manuel Rodriguez</th>
-                                    <th>jmrscuba@gmail.com</th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">jmrscuba@gmail.com</a> </th>
                                     <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
                                  <tr>
                                  <tr>
                                     <th>Melissa Oconitrillo</th>
-                                    <th>melissa.oconitrillo@gmail.com</th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">melissa.oconitrillo@gmail.com</a></th>
                                     <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
                                  </tr>
                                  <tr>
-                                    <th>Moisés Fallas</td>
-                                    <th>moisolk@hotmail.com</td>
+                                    <th class="photo">
+                                       Moises Fallas
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Moises.jpg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+
+                                    </td>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">moisolk@hotmail.com</a></th>
                                     <th><img src="http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Live-Hotmail-Metro-icon.png" alt="" width=80px; height=80px;></th>
                                  </tr>
                               </table>

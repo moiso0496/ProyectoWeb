@@ -553,6 +553,8 @@ ul.fotos li a:hover {
 	0 0 100px #28B463,
 	0 0 150px #28B463;
 	font-family: 'Macondo', sans-serif;
+	font-size: 24px;
+	font-style: oblique;
 }
 
 #accordion > div > p{

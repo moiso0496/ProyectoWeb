@@ -137,12 +137,12 @@ body {
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size: cover;
-}
+	}
+
 #page1 .body-bg {
 	background-image:url(../images/1page-main-bg.png);
 
 }
-
 
 #page6 .body-bg{
 	background-image: url(../images/FonndoPag6.jpg);
@@ -456,9 +456,9 @@ ul.fotos {
    width: 970px;
    margin: 0 0 18px -30px;
 }
+
 ul.fotos li {
    display: inline;
-     
 }
 
 ul.fotos a {
@@ -478,7 +478,7 @@ ul.fotos img {
    display: block;
    width: 190px;
    margin-bottom: 12px;
-} 
+}
 
 ul.fotos a:after {
    content: attr(title);
@@ -488,14 +488,12 @@ ul.fotos li:nth-child(3n) a {
    -webkit-transform: none;
    position: relative;
    top: -5px;
-   
 }
 
 ul.fotos li:nth-child(5n) a {
    -webkit-transform: rotate(5deg);
    position: relative;
    right: 5px;
-   
 }
 
 ul.fotos li a:hover {
@@ -503,9 +501,135 @@ ul.fotos li a:hover {
    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
    position: relative;
    z-index: 5;
-} 
+}
 
 /*======AALESTON Photos=====*/
+
+/*Titulos, acordion, videos => history*/
+#slideshow {
+	margin-left: 20px;
+	margin-top: 20px;
+  position: relative;
+  width: 55%;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.6);
+}
+#slideshow > div {
+	width: 98%;
+  height: 94%;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  bottom: 10px;
+}
+
+#tituloHis{
+	letter-spacing: 15px;
+}
+
+#accordion > h3{
+	text-shadow: 0 0 10px #fff,
+	0 0 20px #fff,
+	0 0 30px #fff,
+	0 0 40px #ff00de,
+	0 0 70px #ff00de,
+	0 0 80px #ff00de,
+	0 0 100px #ff00de,
+	0 0 150px #ff00de;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 50px;
+	letter-spacing: 10px;
+	font-family: 'Cinzel', sans-serif;
+}
+#accordion > h3:hover{
+	text-shadow: 0 0 10px #fff,
+	0 0 20px #fff,
+	0 0 30px #fff,
+	0 0 40px #28B463,
+	0 0 70px #28B463,
+	0 0 80px #28B463,
+	0 0 100px #28B463,
+	0 0 150px #28B463;
+	font-family: 'Macondo', sans-serif;
+}
+
+#accordion > div > p{
+	text-align: center;
+	font-family: 'Macondo', sans-serif;
+}
+
+#imghis{
+	text-align: center;
+	background-color: rgba(0, 0, 152, 0.2);
+	margin-bottom: 25px;
+}
+
+#his1{
+	    height: 230px;
+	    width: 170px;
+	    margin: 15px 0;
+	    -webkit-transition: all 1s ease;
+	    -moz-transition: all 1s ease;
+	    -o-transition: all 1s ease;
+	}
+
+#his1:hover {
+	    height: 270px;
+	    width: 200px;
+	    margin-top: 10px;
+	}
+
+#his2{
+	    height: 230px;
+	    width: 170px;
+	    margin: 15px 0;
+	    -webkit-transition: all 1s ease;
+	    -moz-transition: all 1s ease;
+	    -o-transition: all 1s ease;
+	}
+
+#his2:hover {
+	    height: 270px;
+	    width: 200px;
+	    margin-top: 10px;
+	}
+
+	#his3{
+		    height: 230px;
+		    width: 170px;
+		    margin: 15px 0;
+		    -webkit-transition: all 1s ease;
+		    -moz-transition: all 1s ease;
+		    -o-transition: all 1s ease;
+		}
+
+	#his3:hover {
+		    height: 270px;
+		    width: 200px;
+		    margin-top: 10px;
+		}
+
+	#his4{
+		    height: 230px;
+		    width: 170px;
+		    margin: 15px 0;
+		    -webkit-transition: all 1s ease;
+		    -moz-transition: all 1s ease;
+		    -o-transition: all 1s ease;
+		}
+
+	#his4:hover {
+		    height: 270px;
+		    width: 200px;
+		    margin-top: 10px;
+		}
+
+	.videoHis{
+		background-color: rgba(0, 0, 152, 0.2);
+	}
+} 
 
 /*----- forms -----*/
 

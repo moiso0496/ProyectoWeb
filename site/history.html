@@ -6,6 +6,11 @@
 <meta name="keywords" content="put, your, keyword, here">
 <meta name="author" content="Templates.com - website templates provider">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
@@ -14,6 +19,19 @@
 <script type="text/javascript" src="js/cufon-replace.js"></script>
 <script type="text/javascript" src="js/OrigGarmnd_BT_400.font.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+
+<script type="text/javascript" src="js/burbujas.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+
 <!--[if lt IE 7]>
    <script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
  <![endif]-->
@@ -25,6 +43,41 @@
 <div class="body-bg wrap">
    <!-- header -->
    <header>
+     <script>
+			$(document).ready(function(){
+				$("#slideshow > div:gt(0)").hide();
+				setInterval(function() {
+				$('#slideshow > div:first')
+					.fadeOut(2000)
+					.next()
+					.fadeIn(2000)
+					.end()
+					.appendTo('#slideshow');
+				}, 7000);
+			});
+			</script>
+
+			<div id="slideshow" style="float:Left";>
+			   <div>
+			     <img src="images/Hisbeer1.jpg" style="width: 100%; height: 100%; margin-top:10px; opacity:0.9;">
+			   </div>
+			   <div>
+			     <img src="images/hisbeer2.jpg" style="width: 100%; height: 100%; margin-top:10px; opacity:0.9;">
+			   </div>
+			   <div>
+					 <img src="images/hisbeer3.jpg" style="width: 100%; height: 100%; margin-top:10px; opacity:0.9;">
+			   </div>
+				 <div>
+					 <img src="images/hisbeer4.jpg" style="width: 100%; height: 100%; margin-top:10px; opacity:0.9;">
+			   </div>
+				 <div>
+					 <img src="images/hisbeer5.jpg" style="width: 100%; height: 100%; margin-top:10px; opacity:0.9;">
+			   </div>
+				 <div>
+			     <img src="images/hisbeer6.jpg" style="width: 100%; height: 100%; margin-top:10px; opacity:0.9;">
+			   </div>
+			</div>
+
       <div class="container">
          <!--<h1><a href="index.html">Brewery</a></h1>-->
          <nav>
@@ -43,7 +96,7 @@
    <section id="content">
       <div class="container">
          <div class="inside">
-            <h2>¿Cómo inició?</h2>
+            <h2 id="tituloHis">¿Cómo inició?</h2>
             <div class="box">
                <div class="left-top-corner">
                   <div class="right-top-corner">
@@ -54,12 +107,28 @@
                   <div class="border-left">
                      <div class="border-right">
                         <div class="inner1">
-                           <div class="img-box alt"><img src="images/iconhistory.jpg" width=170px height=230px>
-                              <p class="p0">Existen referencias de que en la remota <a href="http://culturillacervecera.blogspot.com/2008/07/la-cerveza-en-la-antigua-mesopotamia.html" target="_blank"><b>Mesopotamia</b></a> ya se producía cerveza. Se han encontrado hasta recetas de elaboración de cerveza en escritura cuneiforme. Esta bebida les gustó tanto a los egipcios, que aprendieron rápidamente a elaborar este "vino de cebada" y la hicieron su bebida nacional. Como era una bebida tan popular se elaboraba en verdaderas fábricas.La cerveza es tan antigua como nuestra civilización. Se cree que su origen está unido a los primeros asentamientos humanos hacia el 9.000 A.C., unidos al desarrollo de la agricultura y al abandono del estilo de vida nómade. Pero fue en Sumeria (Mesopotamia) por el 4.000 A.C. donde se tiene registro en unas tablas de arcilla de las primeras menciones de la cerveza.  Por esto se cree que los sumerios fueron los primeros en fermentar granos como la cebada, en principio por casualidad, dejando un tipo de pan afuera en la lluvia, y que luego con el calor y levaduras salvajes fermentó. Y luego ya lo hacían fermentar en tinajas de agua.</p>
-                           </div>
-                           <p>Mesopotamia luego se convirtió en el Imperio Babilónico, donde a pesar del cambio de cultura la cerveza siguió siendo una bebida muy apreciada, también porque se consideraba un alimento. Los babilonios desarrollaron el arte de hacer cerveza a un nivel superior, creando alrededor de 20 tipos de recetas diferentes de cerveza. De hecho la primera receta de cerveza de la que se tiene registro está escrita en el Código de Hamurabi.</p>
-                           <p class="p0">Pero la presencia de la cerveza en la antiguedad no se limitó solo a Mesopotamia, los <a href="http://www.egiptomania.com/vidacotidiana/cerveza.htm" target="_blank"><b>Egipcios</b></a> también desarrollaron la cerveza, de una forma parecida. A partir de una masa de pan sin hornear que dejaban fermentar en agua y que gracias a la temperaturas y a la acción de levaduras salvajes, se convertía en cerveza. Le llamaban "zythum" o vino de cebada. Y la  perfumaban con canela, miel y a veces las mezclaban con frutos, como dátiles.</p>
-                        </div>
+                           <div id="accordion">
+                             <h3>Inicios</h3>
+                             <div>
+                               <div id="imghis">
+                                 <img id="his1" src="images/iconhistory.jpg">
+                                 <img id="his2" src="images/his2.jpg">
+                                 <img id="his2" src="images/his3.jpg">
+                                 <img id="his2" src="images/his4.jpg">
+                               </div>
+                               <p class="p0">Existen referencias de que en la remota <a href="http://culturillacervecera.blogspot.com/2008/07/la-cerveza-en-la-antigua-mesopotamia.html" target="_blank"><b>Mesopotamia</b></a> ya se producía cerveza. Se han encontrado hasta recetas de elaboración de cerveza en escritura cuneiforme. Esta bebida les gustó tanto a los egipcios, que aprendieron rápidamente a elaborar este "vino de cebada" y la hicieron su bebida nacional. Como era una bebida tan popular se elaboraba en verdaderas fábricas.La cerveza es tan antigua como nuestra civilización. Se cree que su origen está unido a los primeros asentamientos humanos hacia el 9.000 A.C., unidos al desarrollo de la agricultura y al abandono del estilo de vida nómade. Pero fue en Sumeria (Mesopotamia) por el 4.000 A.C. donde se tiene registro en unas tablas de arcilla de las primeras menciones de la cerveza.  Por esto se cree que los sumerios fueron los primeros en fermentar granos como la cebada, en principio por casualidad, dejando un tipo de pan afuera en la lluvia, y que luego con el calor y levaduras salvajes fermentó. Y luego ya lo hacían fermentar en tinajas de agua.</p>
+                             </div>
+                             <h3>Mesopotamia</h3>
+                             <div>
+                               <p>Mesopotamia luego se convirtió en el Imperio Babilónico, donde a pesar del cambio de cultura la cerveza siguió siendo una bebida muy apreciada, también porque se consideraba un alimento. Los babilonios desarrollaron el arte de hacer cerveza a un nivel superior, creando alrededor de 20 tipos de recetas diferentes de cerveza. De hecho la primera receta de cerveza de la que se tiene registro está escrita en el Código de Hamurabi.</p>
+                               <div class="videoHis" style="position:relative;height:0;padding-bottom:40.0%"><iframe src="https://www.youtube.com/embed/mZsH6X9HtrU?ecver=2" width="240" height="220" frameborder="0" style="position:absolute;width:80%;height:100%;left:10%" allowfullscreen></iframe></div>
+                             </div>
+                             <h3>Los egipcios</h3>
+                             <div>
+                                <p>Pero la presencia de la cerveza en la antiguedad no se limitó solo a Mesopotamia, los <a href="http://www.egiptomania.com/vidacotidiana/cerveza.htm" target="_blank"><b>Egipcios</b></a> también desarrollaron la cerveza, de una forma parecida. A partir de una masa de pan sin hornear que dejaban fermentar en agua y que gracias a la temperaturas y a la acción de levaduras salvajes, se convertía en cerveza. Le llamaban "zythum" o vino de cebada. Y la  perfumaban con canela, miel y a veces las mezclaban con frutos, como dátiles.</p>
+                                <div class="videoHis" style="position:relative;height:0;padding-bottom:40.0%"><iframe src="https://www.youtube.com/embed/vhOQBWN45Gs?ecver=2" width="240" height="220" frameborder="0" style="position:absolute;width:80%;height:100%;left:10%" allowfullscreen></iframe></div>
+                             </div>
+                          </div>
                      </div>
                   </div>
                </div>

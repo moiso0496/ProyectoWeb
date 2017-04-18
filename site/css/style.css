@@ -142,13 +142,13 @@ body {
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size: cover;
-<
+
 	}
 
 #page1 .body-bg {
 	background-image:url(../images/1page-main-bg.png);
 
-}
+
 
 }
 #home .body-bg {
@@ -699,7 +699,7 @@ ul.fotos li a:hover {
 	.videoHis{
 		background-color: rgba(0, 0, 152, 0.2);
 	}
-} 
+
 
 /*----- forms -----*/
 

@@ -20,11 +20,58 @@
 <!--[if lt IE 9]>
     <script type="text/javascript" src="js/html5.js"></script>
     <![endif]-->
+   <script src="js/jquery.js"></script>
+   <script src="js/jquery-ui.js"></script>
+
+   <script>
+       $( function() {
+           $( "#draggable" ).draggable();
+       } );
+   </script>
+
+   <script>
+       $( function() {
+           // run the currently selected effect
+           function runEffect() {
+               // get effect type from
+               var selectedEffect = "slide";
+
+               // Most effect types need no options passed by default
+               var options = {};
+               // some effects have required parameters
+               if ( selectedEffect === "explode" ) {
+                   options = { percent: 50 };
+               } else if ( selectedEffect === "size" ) {
+                   options = { to: { width: 280, height: 185 } };
+               }
+
+               // Run the effect
+               $( "div.effect" ).show( selectedEffect, options, 500, callback );
+           };
+
+           //callback function to bring a hidden box back
+           function callback() {
+               setTimeout(function() {
+                   $( "div.effect:visible" ).removeAttr( "style" ).fadeOut();
+               }, 5000 );
+           };
+
+           // Set effect from select menu value
+           $( "" ).each("photo").on( "click", function() {
+               runEffect();
+           });
+
+           $( "#effect" ).hide();
+       } );
+   </script>
+
+
+
 </head>
-<body id="page5">
+<body id="contacts">
 <div class="body-bg wrap">
    <!-- header -->
-   <header>
+   <header >
       <div class="container">
          <h1><a href="index.html">Brewery</a></h1>
          <nav>
@@ -34,24 +81,17 @@
                <li><a href="history.html"><span>Historia</span></a></li>
                <li class="current" ><a href="contacts.html"><span>Contactos</span></a></li>
                <li><a href="events.html"><span>Eventos</span></a></li>
-               <li><a href="beneficios.html.html"><span>beneficios</span></a></li>
+               <li><a href="beneficios.html"><span>beneficios</span></a></li>
             </ul>
          </nav>
-         <div class="indent">
-            <address>
-            <span class="fleft"><b>Zip Code:</b>50122<br>
-            <b>Country:</b>USA<br>
-            <b>City:</b>New York<br>
-            <b>Telephone:</b>+354 5635600</span> <span class="extra-wrap"><strong>Miscellaneous info:</strong>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</span>
-            </address>
-         </div>
+
       </div>
    </header>
    <!-- content -->
    <section id="content">
       <div class="container">
-         <div class="inside">
-            <h2>Contact Form</h2>
+         <div id="draggable" class="inside">
+            <h2>Contactos</h2>
             <div class="box">
                <div class="left-top-corner">
                   <div class="right-top-corner">
@@ -63,21 +103,66 @@
                      <div class="border-right">
                         <div class="inner1">
                            <form id="contacts-form" action="">
-                              <fieldset>
-                              <div class="field">
-                                 <label>Full Name:</label>
-                                 <input type="text" value=""/>
-                              </div>
-                              <div class="field">
-                                 <label>E-Mail Address:</label>
-                                 <input type="email" value=""/>
-                              </div>
-                              <div class="field">
-                                 <label>Enquiry:</label>
-                                 <textarea cols="1" rows="1"></textarea>
-                              </div>
-                              <div class="alignright"><a href="#" onclick="document.getElementById('contacts-form').reset()" class="alt">Clear</a> &nbsp; &nbsp; <a href="#" onclick="document.getElementById('contacts-form').submit()">Send</a></div>
-                              </fieldset>
+                              <table class="ContactosTabla">
+
+                                 <tr>
+                                    <th>Nombre</th>
+                                    <th>Correo Electrónico</th>
+                                    <th>Tipo Correo Electronico</th>
+                                 </tr>
+
+                                 <tr>
+                                    <th id ="photo">
+                                       <br>
+                                       Alonso Aleston
+
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <br>
+                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Gerardo.jpg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+                                       <br>
+                                    </th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback"><br>aaleston@gmail.com </a> </th>
+                                    <th><br><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 <tr>
+                                 <tr>
+                                    <th id="photo">
+                                       Gerardo Gomez
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Gerardo.jpg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+                                    </th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">gcgoqn@gmail.com</a> </th>
+                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 <tr>
+                                 <tr>
+                                    <th>Jose Manuel Rodriguez</th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">jmrscuba@gmail.com</a> </th>
+                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 <tr>
+                                 <tr>
+                                    <th>Melissa Oconitrillo</th>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">melissa.oconitrillo@gmail.com</a></th>
+                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 </tr>
+                                 <tr>
+                                    <th id="photo">
+                                       Moises Fallas
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Moises.jpg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+
+                                    </td>
+                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">moisolk@hotmail.com</a></th>
+                                    <th><img src="http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Live-Hotmail-Metro-icon.png" alt="" width=80px; height=80px;></th>
+                                 </tr>
+                              </table>
                            </form>
                         </div>
                      </div>
@@ -95,9 +180,7 @@
 </div>
 <!-- footer -->
 <footer>
-   <div class="container">
-      <div class="inside">Website template designed by <a class="new_window" href="http://www.templatemonster.com/" target="_blank" rel="nofollow">TemplateMonster.com</a></div>
-   </div>
+
 </footer>
 <script type="text/javascript"> Cufon.now(); </script>
 </body>

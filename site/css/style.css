@@ -22,6 +22,22 @@ time {
 	display:inline;
 }
 
+
+.ContactosTabla {
+
+	background-color: #ffeb8e;
+	color: black;
+	text-align: center;
+	font-size: 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 100%;
+	opacity: 0.6;
+}
+.ContactosTabla th, .ContactosTabla td {
+	border: 2px solid #6e5908;
+}
+
+
 /* Global properties ======================================================== */
 body {
 	background:url(../images/tail-top.gif) left top repeat-x #ffa600;
@@ -75,15 +91,8 @@ body {
 		margin-top:-328px;
 		position:relative;
 		text-align:center;
-		background-image:url(../images/bottom-bg1.png);
-		background-repeat:no-repeat;
-		background-position:center top;
-	}
-	#page1 footer {
-		text-align:left;
-		background-image:url(../images/bottom-bg.png);
-	}
 
+	}
 
 
 
@@ -127,21 +136,34 @@ body {
 
 
 /*---- tailings ----*/
-.body-bg {
-	background-image:url(../images/main-bg.jpg);
-	background-repeat:no-repeat;
-	background-position:center top;
-}
+
 #page3 .body-bg {
 	background-image:url(../images/Poker.jpg);
 	background-repeat:no-repeat;
 	background-position:center;
 	background-size: cover;
+<
 	}
 
 #page1 .body-bg {
 	background-image:url(../images/1page-main-bg.png);
 
+}
+
+}
+#home .body-bg {
+	background-image:url(../images/home.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
+
+}
+
+#contacts .body-bg{
+	background-image: url(../images/contacts.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
 }
 
 #page6 .body-bg{
@@ -269,6 +291,7 @@ a:hover {
 
 h1 {
 	text-indent:-9999px;
+
 }
 
 	h1 a {
@@ -278,6 +301,24 @@ h1 {
 		width:282px;
 		height:119px;
 		background:url(../images/logo.jpg) no-repeat left top;
+	}
+
+	#home h1 a{
+		left:44px;
+		top:46px;
+		width:400px;
+		height:400px;
+		background:url(../images/homeIcon.png) no-repeat left top;
+
+	}
+
+	#contacts h1 a{
+		left:44px;
+		top:46px;
+		width:282px;
+		height:119px;
+		background:url(../images/ulacit.png) no-repeat left top;
+
 	}
 	 #HeaderEventos {
 		position:absolute;
@@ -292,6 +333,33 @@ h2 {
 	line-height:1.2em;
 	padding-left:9px;
 	margin-bottom:15px;
+}
+#home h2{
+	font-size:30px;
+	text-align: center;
+	line-height:1.2em;
+	padding-left:9px;
+	margin-bottom:15px;
+}
+
+#contacts h2{
+	font-size:40px;
+	color: #ffeb8e;
+	line-height:1.2em;
+	padding-left:9px;
+	margin-bottom:15px;
+
+
+}
+
+#contacts h3{
+	font-size:40px;
+	color: #ffeb8e;
+	line-height:1.2em;
+	padding-left:9px;
+	margin-bottom:15px;
+
+
 }
 h5 {
 	font-size:1em;

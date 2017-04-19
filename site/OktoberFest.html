@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OktoberFest | ...</title>
+<meta name="description" content="Place your description here">
+<meta name="keywords" content="put, your, keyword, here">
+<meta name="author" content="Templates.com - website templates provider">
+<meta charset="utf-8">
+    <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/cufon-replace.js"></script>
+    <script type="text/javascript" src="js/OrigGarmnd_BT_400.font.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+
+</head>
+<body id="OktoberFest">
+<div class="body-bg wrap">
+   <!-- header -->
+   <header>
+      <div class="container">
+         <h1 id="HeaderOktober">OktoberFest</h1>
+         <nav>
+            <ul>
+              <li><a href="index.html"><span>Home</span></a></li>
+              <li><a href="tipos.html"><span>Tipos</span></a></li>
+              <li><a href="history.html"><span>Historia</span></a></li>
+              <li><a href="contacts.html"><span>Contactos</span></a></li>
+              <li class="current"><a href="events.html"><span>Eventos</span></a></li>
+              <li><a href="beneficios.html"><span>Beneficios</span></a></li>
+            </ul>
+         </nav>
+      </div>
+
+<div class="body-bg wrap">
+
+    		<table class="countdownContainer">
+    			<tr>
+    				<td colspan="4">Faltan</td>
+    			</tr>
+    			<tr>
+    				<td id="days">120</td>
+    				<td id="hours">4</td>
+    				<td id="minutes">12</td>
+    				<td id="seconds">22</td>
+    			</tr>
+    			<tr>
+    				<td>Dias</td>
+    				<td>Horas</td>
+    				<td>Minutos</td>
+    				<td>Segundos</td>
+    			</tr>
+    		</table>
+        </div>
+    		<script type="text/javascript">
+
+    			function countdown(){
+    				var now = new Date();
+    				var eventDate = new Date(2017, 9, 16);
+
+    				var currentTiime = now.getTime();
+    				var eventTime = eventDate.getTime();
+
+    				var remTime = eventTime - currentTiime;
+
+    				var s = Math.floor(remTime / 1000);
+    				var m = Math.floor(s / 60);
+    				var h = Math.floor(m / 60);
+    				var d = Math.floor(h / 24);
+
+    				h %= 24;
+    				m %= 60;
+    				s %= 60;
+
+    				h = (h < 10) ? "0" + h : h;
+    				m = (m < 10) ? "0" + m : m;
+    				s = (s < 10) ? "0" + s : s;
+
+    				document.getElementById("days").textContent = d;
+    				document.getElementById("days").innerText = d;
+    				document.getElementById("hours").textContent = h;
+    				document.getElementById("minutes").textContent = m;
+    				document.getElementById("seconds").textContent = s;
+
+    				setTimeout(countdown, 1000);
+    			}
+
+    			countdown();
+    		</script>
+
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/hlerYKBLL1w?autoplay=1" frameborder="0" allowfullscreen width="580" height="350"></iframe>
+        </div>
+  </body>
+
+    </html>

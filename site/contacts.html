@@ -29,45 +29,34 @@
        } );
    </script>
 
+
+   <script>
+      $(function () {
+          $(".foto").hide();
+      })
+   </script>
    <script>
        $( function() {
-           // run the currently selected effect
-           function runEffect() {
-               // get effect type from
-               var selectedEffect = "slide";
 
-               // Most effect types need no options passed by default
-               var options = {};
-               // some effects have required parameters
-               if ( selectedEffect === "explode" ) {
-                   options = { percent: 50 };
-               } else if ( selectedEffect === "size" ) {
-                   options = { to: { width: 280, height: 185 } };
-               }
+           $( ".photo" ).on( "click", function() {
+               $(".foto").show("slow");
 
-               // Run the effect
-               $( "div.effect" ).show( selectedEffect, options, 500, callback );
-           };
-
-           //callback function to bring a hidden box back
-           function callback() {
-               setTimeout(function() {
-                   $( "div.effect:visible" ).removeAttr( "style" ).fadeOut();
-               }, 5000 );
-           };
-
-           // Set effect from select menu value
-           $( "" ).each("photo").on( "click", function() {
-               runEffect();
            });
 
-           $( "#effect" ).hide();
+           $( ".foto" ).on( "click", function() {
+               $(".foto").hide("slow");
+
+           });
        } );
    </script>
 
 
 
-</head>
+
+
+
+
+
 <body id="contacts">
 <div class="body-bg wrap">
    <!-- header -->
@@ -112,55 +101,77 @@
                                  </tr>
 
                                  <tr>
-                                    <th id ="photo">
-                                       <br>
-                                       Alonso Aleston
+                                    <th>
+                                          <br>
+                                          <a><p class="photo">Alonso Aleston</p></a>
 
                                        <div class="toggler">
-                                          <div class="effect">
-                                             <br>
-                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Gerardo.jpg"  width=120px height=120px ></h3>
+                                          <div>
+                                             <h3 class="ui-widget-header ui-corner-all"><img class="foto" src="images/Alonso.jpeg"  width=120px height=120px ></h3>
                                           </div>
                                        </div>
                                        <br>
                                     </th>
                                     <th><a href="mailto:aaleston@gmail.com?subject=Feedback"><br>aaleston@gmail.com </a> </th>
                                     <th><br><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 </tr>
                                  <tr>
-                                 <tr>
-                                    <th id="photo">
-                                       Gerardo Gomez
+                                    <th>
+                                       <br>
+                                      <a> <p class="photo">Gerardo Gomez</p></a>
                                        <div class="toggler">
                                           <div class="effect">
-                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Gerardo.jpg"  width=120px height=120px ></h3>
+                                             <br>
+                                             <h3 class="ui-widget-header ui-corner-all"><img class="foto" src="images/Gerardo.jpg"  width=120px height=120px ></h3>
                                           </div>
                                        </div>
                                     </th>
-                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">gcgoqn@gmail.com</a> </th>
-                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                    <th><br>
+                                       <a href="mailto:cgoqn@gmail.com?subject=Feedback">gcgoqn@gmail.com</a> </th>
+                                    <th><br>
+                                       <img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
                                  <tr>
                                  <tr>
-                                    <th>Jose Manuel Rodriguez</th>
-                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">jmrscuba@gmail.com</a> </th>
-                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
-                                 <tr>
-                                 <tr>
-                                    <th>Melissa Oconitrillo</th>
-                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">melissa.oconitrillo@gmail.com</a></th>
-                                    <th><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
-                                 </tr>
-                                 <tr>
-                                    <th id="photo">
-                                       Moises Fallas
+                                    <th> <br>
+                                      <a> <p class="photo">Jose Manuel Rodriguez </p></a>
                                        <div class="toggler">
                                           <div class="effect">
-                                             <h3 class="ui-widget-header ui-corner-all"><img src="images/Moises.jpg"  width=120px height=120px ></h3>
+                                             <br>
+                                             <h3 class="ui-widget-header ui-corner-all"><img class="foto" src="images/Jose.jpeg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+                                       </th>
+                                    <th><br><a href="mailto:jmrscuba@gmail.com?subject=Feedback">jmrscuba@gmail.com</a> </th>
+                                    <th><br><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 <tr>
+                                 <tr>
+                                    <th><br>
+                                       <a><p class="photo"> Melissa Oconitrillo </p></a>
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <br>
+                                             <h3 class="ui-widget-header ui-corner-all"><img class="foto" src="images/Meli.jpeg"  width=120px height=120px ></h3>
+                                          </div>
+                                       </div>
+
+
+                                      </th>
+                                    <th><br><a href="mailto:melissa.oconitrillo@gmail.com?subject=Feedback">melissa.oconitrillo@gmail.com</a></th>
+                                    <th><br><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;></th>
+                                 </tr>
+                                 <tr>
+                                    <th><br>
+                                       <a>  <p class="photo">Moises Fallas</p></a>
+                                       <div class="toggler">
+                                          <div class="effect">
+                                             <h3 ><img class="foto" src="images/Moises.jpg"  width=120px height=120px ></h3>
                                           </div>
                                        </div>
 
                                     </td>
-                                    <th><a href="mailto:aaleston@gmail.com?subject=Feedback">moisolk@hotmail.com</a></th>
-                                    <th><img src="http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/256/Web-Live-Hotmail-Metro-icon.png" alt="" width=80px; height=80px;></th>
+                                    <th><br><a href="mailto:moisolk@gmail.com?subject=Feedback">moisolk@gmail.com</a></th>
+                                    <th><br><img src="https://lh6.ggpht.com/8-N_qLXgV-eNDQINqTR-Pzu5Y8DuH0Xjz53zoWq_IcBNpcxDL_gK4uS_MvXH00yN6nd4=w300-rw" alt="" width=80px; height=80px;><br></th>
+
                                  </tr>
                               </table>
                            </form>

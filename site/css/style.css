@@ -254,6 +254,26 @@ footer {
 	background: #f6f6f6;
 }
 
+#page3 .body-bg {
+	background-image:url(../images/Poker.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size: cover;
+}
+#page1 .body-bg {
+	background-image:url(../images/1page-main-bg.png);
+}
+
+#page_tipos .body-bg {
+	background-image:url(../images/Fondo_Cervezas.jpg);
+}
+
+.body-bg {
+	background-image:url(../images/main-bg.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+}
+
 .countdownContainer{
 	position: absolute;
 	top: 35%;
@@ -661,60 +681,252 @@ footer a {
 	z-index:20;
 }
 
-/*======AALESTON Photos=====*/
+/*======AALESTON Photos NEW =====*/
 
-ul.fotos {
-	width: 970px;
-	margin: 0 0 18px -30px;
+* {
+	box-sizing:border-box
 }
 
-ul.fotos li {
-	display: inline;
-}
+.mySlides {display:none}
 
-ul.fotos a {
-	display: inline;
-	float: left;
-	margin: 0 0 27px 30px;
-	width: auto;
-	padding: 10px 10px 15px;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  text-align: center;
+  margin-left: 4%;
+  border: 2px solid;
+ }
+
+.mySlides h3, .mySlides p {
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    left:0;
+    right:0;
+	margin-left:25%;
+    padding:10px;
 	text-align: center;
-	color: #333;
-	font-size: 18px;
-	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
-	-webkit-transform: rotate(-2deg);
-	-webkit-transition: -webkit-transform .15s linear;
-}
-ul.fotos img {
-	display: block;
-	width: 190px;
-	margin-bottom: 12px;
 }
 
-ul.fotos a:after {
-	content: attr(title);
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-ul.fotos li:nth-child(3n) a {
-	-webkit-transform: none;
-	position: relative;
-	top: -5px;
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-ul.fotos li:nth-child(5n) a {
-	-webkit-transform: rotate(5deg);
-	position: relative;
-	right: 5px;
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-ul.fotos li a:hover {
-	-webkit-transform: scale(1.25);
-	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
-	position: relative;
-	z-index: 5;
+.active {
+  background-color: #717171;
 }
 
-/*======AALESTON Photos=====*/
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+.contenedor_nav{
+  height: 30%;
+  background-color: rgba(233,230,123,0.5);
+  /* opacity: 0.5; */
+  /* filter:  alpha(opacity=50); */
+  margin: 1% 10%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  border: 2px solid;
+  /* border-radius: 25px; */
+} 
+
+.contenedor_main{
+  height: 70%;
+  background-color: rgba(94,94,119,0.9);
+/*   opacity: 0.5;
+ */  /* filter:  alpha(opacity=50); */
+  border: 2px solid;
+  /* border-radius: 25px; */
+  margin: 1% 1%;
+  
+  
+} 
+
+#tabla_position{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 80%;
+	height: 70%;
+}
+
+.contenedor_main h2{
+	color: #B9770E;
+	font-size: 42px;
+	text-align:left;
+	text-shadow: 2px 2px 4px #000000;
+} 
+
+#tabla_position tr td {
+/* 	color: black;
+	border: 2px solid; 
+ 	text-align: center;  
+	color: black;
+	border: 2px solid;*/
+	padding-left: 5px;
+	padding-right: 5px;
+} 
+
+#tabla_position p {
+ 	color: black;
+	text-align: left;
+}
+
+.par {
+	color:white;
+	text-align: center;
+	font-size: 16px;
+	padding-left: 2%;
+	padding-right: 2%;
+} 
+
+ul.img-list {
+  list-style-type: none;
+  margin: 2%;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: 418px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 418px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul.img-list li:hover span.text-content {
+  opacity: 1;
+}
+
+/*  */
+
+ul.img-list2 {
+  list-style-type: none;
+  margin: 2%;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list2 li {
+  display: inline-block;
+  height: 418px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 100%;
+}
+
+span.text-content2 {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 418px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+span.text-content2 span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul.img-list2 li:hover span.text-content2 {
+  opacity: 1;
+}
+
+.contenedor_main h3 {
+	
+	color: white;
+	font-size: 42px;
+	text-align:left;
+	text-shadow: 2px 2px 4px #000000;
+	
+}
+
+
+/*======AALESTON Photos NEW =====*/
+
 
 /*Titulos, acordion, videos => history*/
 #slideshow {
